@@ -132,7 +132,7 @@ while True:
             t=26
             h=63
             m=38
-            data = {"d":{ 'temperature': t, 'humidity': h, 'soilmoisture': m, 'mammal': mammal}}
+            data = {"d":{ 'temperature': t, 'humidity': h, 'soilmoisture': m, 'animal': animal}}
 
             def myOnPublishCallback():
                 print ("Published data to IBM Watson")
@@ -141,7 +141,7 @@ while True:
             if not success:
                 print("Not connected to IoTF")
                 time.sleep(1)
-                mammal=0
+                animal=0
 
         deviceCli.commandCallback = myCommandCallback
                 
